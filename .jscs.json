@@ -11,7 +11,8 @@
         "*.tests/**",
         "*.specs/**",
         "*.md",
-        "*.json"
+        "*.json",
+        ".gitignore"
     ],
     "fileExtensions": [".js", ".bemtree", ".bemhtml"],
     "requireSpaceAfterKeywords": ["do", "else"],

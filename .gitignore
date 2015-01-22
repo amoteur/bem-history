@@ -8,3 +8,6 @@ libs/
 /*.specs
 /*.tests
 /*.docs
+
+npm-debug.log
+.DS_Store
