@@ -3,7 +3,7 @@
  * @module history
  */
 
-modules.define('history', ['inherit', 'events', 'jquery', 'uri'], function(provide, inherit, events, $, Uri) {
+modules.define('history', ['inherit', 'events', 'jquery', 'uri__dom'], function(provide, inherit, events, $, Uri) {
 
 /**
  * @class BEMHistory

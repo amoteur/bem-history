@@ -61,17 +61,17 @@ describe('uri', function() {
         u.setPath('');
         u.toString().should.be.eql('http://test.com');
     });
-    
+
     it('should be able to parse query', function() {
         u = Uri.parse('http://test.com/index.html?param1=1&param2=21&param2=22');
         u.queryParams.should.be.eql({ param1 : ['1'], param2 : ['21', '22'] });
     });
-    
+
     it('should differ ?param from ?param=', function() {
         u = Uri.parse('http://test.com/index.html?param1&param2=&param1');
         u.queryParams.should.be.eql({ param1 : [], param2 : [''] });
     });
-    
+
     it('should add { param: [] } to query as ?param', function() {
         u = Uri.parse('http://test.com/index.html');
         u.addParam('param', []);
@@ -189,22 +189,22 @@ describe('uri', function() {
             parsed = Uri.parse('http://example.com' + originalQuery);
         parsed.getQuery().should.be.eql(originalQuery);
     });
-    
+
     it('should be able to return url root', function() {
         u = Uri.parse('http://test.com/ololo/trololo.html?param1=1#!123');
         u.getRoot().should.be.eql('http://test.com/ololo');
     });
-    
+
     it('should be able to decode cp1251 encoded params', function() {
         u = Uri.parse('http://test.com/ololo/trololo.html?text=%F2%E0%E1%EB%EE');
         u.getParam('text')[0].should.be.eql('табло');
     });
-    
+
     it('should not fall on params encoded with unknown encoding', function() {
         u = Uri.parse('http://test.com/ololo/trololo.html?text=%COCO%C0C0');
         u.getParam('text')[0].should.be.eql('%COCO%C0C0');
     });
-    
+
     it('should be able to normalize a full url to percentage encoding', function() {
         Uri
             .normalize('http://yandex.ru/yandsearch?text=yandex+почта&lr=213')

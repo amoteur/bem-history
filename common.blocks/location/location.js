@@ -4,7 +4,7 @@
 
 modules.define(
     'location',
-    ['inherit', 'events', 'history', 'objects', 'uri'],
+    ['inherit', 'events', 'history', 'objects', 'uri__dom'],
     function(provide, inherit, events, History, objects, Uri) {
 
 /**

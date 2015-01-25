@@ -1,6 +1,6 @@
 window.history = {};
 
-modules.define('spec', ['uri', 'location', 'jquery'], function(provide, Uri, location, $) {
+modules.define('spec', ['uri__dom', 'location', 'jquery'], function(provide, Uri, location, $) {
 
 describe('location hashchange', function() {
 

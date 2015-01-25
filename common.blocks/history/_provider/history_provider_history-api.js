@@ -3,7 +3,7 @@
  *
  * @module history
  */
-modules.define('history', ['inherit', 'jquery', 'uri'], function(provide, inherit, $, Uri, Base) {
+modules.define('history', ['inherit', 'jquery', 'uri__dom'], function(provide, inherit, $, Uri, Base) {
 
 if(!Base.hasNativeAPI()) {
     provide(Base);
